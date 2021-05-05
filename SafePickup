@@ -1,0 +1,15 @@
+from karel.stanfordkarel import *
+
+"""
+File: SafePickup.py
+--------------------
+Karel picks up a beeper from the current position 
+if one is present (but does nothing if no beepers are present).
+"""
+
+def main():
+    if beepers_present():
+        pick_beeper()
+
+if __name__ == '__main__':
+    run_karel_program('SafePickup1.w')
