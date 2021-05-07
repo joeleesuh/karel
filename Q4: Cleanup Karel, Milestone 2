@@ -1,0 +1,19 @@
+from karel.stanfordkarel import *
+
+"""
+File: CleanupKarel.py
+--------------------
+CleanupKarel picks up all beepers from the first row of 
+any sized world and ends in the bottom-right corner facing East.
+"""
+def main():
+    if beepers_present():
+        pick_beeper()
+    else:
+        while front_is_clear():
+            move()
+            if beepers_present():
+                pick_beeper()
+
+if __name__ == '__main__':
+    run_karel_program('Cleanup1.w')
